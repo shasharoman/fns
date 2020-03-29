@@ -24,7 +24,9 @@
         "url": "https://github.com/shasharoman/fns/issues"
     },
     "homepage": "https://github.com/shasharoman/fns#readme",
-    "dependencies": {},
+    "dependencies": {
+        "lodash": "4.17.15"
+    },
     "devDependencies": {
         "chai": "4.2.0",
         "eslint": "6.5.0",
