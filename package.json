@@ -1,5 +1,5 @@
 {
-    "name": "fns",
+    "name": "@shasharoman/fns",
     "version": "1.0.0",
     "description": "fns",
     "main": "index.js",
@@ -25,7 +25,7 @@
     },
     "homepage": "https://github.com/shasharoman/fns#readme",
     "dependencies": {
-        "lodash": "4.17.19"
+        "lodash": "4.17.21"
     },
     "devDependencies": {
         "chai": "4.2.0",
