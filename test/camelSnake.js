@@ -62,4 +62,36 @@ describe('camelSnake', () => {
         expect(camelSnake.camelCaseKey(snake)).to.be.deep.equal(camel);
         expect(camelSnake.snakeCaseKey(camel)).to.be.deep.equal(snake);
     });
+
+    it('snakeCaseKey, ignore number', () => {
+        let camel = {
+            '1X': 0,
+            'X1': 0,
+            'X1X': 0,
+            'X1X2x3': 0,
+            'X1xXxX2': 0,
+            x: {
+                '1X': 0,
+                'X1': 0,
+                'X1X': 0,
+                'X1X2x3': 0,
+                'X1xXxX2': 0
+            }
+        };
+
+        expect(camelSnake.snakeCaseKey(camel, true)).to.be.deep.equal({
+            '1x': 0,
+            'x1': 0,
+            'x1x': 0,
+            'x1x2x3': 0,
+            'x1x_xx_x2': 0,
+            x: {
+                '1x': 0,
+                'x1': 0,
+                'x1x': 0,
+                'x1x2x3': 0,
+                'x1x_xx_x2': 0
+            }
+        });
+    });
 });
